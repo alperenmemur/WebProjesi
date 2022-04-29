@@ -21,9 +21,35 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 
+.slide{
+    width:40%;
+    height:auto;
+    margin:auto;
+    margin-top: 2em;
+}
 
+.carousel-item > img {
+    object-position: center center;
+    object-fit: contain;
+    border-radius: 1em;
+}
 
+.sehrim{
+    background: #abbaab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
 
+.sehrim__konu{
+    
+    margin:20px 80px;
+    text-align: center;
+    padding:3em;
+    word-spacing: 1.2;
+}
 
-
-
+.sehrim__konu > h3{
+    margin-bottom:1em;
+    font-weight: 700;
+}
