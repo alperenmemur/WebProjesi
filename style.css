@@ -43,13 +43,7 @@ p {
 }
 
 .sehrim {
-    background: #abbaab;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #ffffff, #abbaab);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
 .sehrim__konu {
@@ -91,8 +85,9 @@ p {
     text-align: center;
 }
 
-#miras{
-    background: linear-gradient(to right, #283c86, #45a247); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+#miras {
+    background: linear-gradient(to right, #283c86, #45a247);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 1em 0;
 }
 
@@ -107,8 +102,15 @@ p {
     margin: auto;
     text-align: center;
     padding-bottom: 1em;
+
 }
 
+/* Animasyon */
+.mirasimiz>figure>img:hover {
+    transform: scale(0.95);
+    transition: transform 100ms ease-in;
+
+}
 
 @media screen and (max-width: 960px) {
     .mirasimiz>figure {
@@ -122,4 +124,68 @@ p {
     object-position: center center;
     object-fit: contain;
     margin: auto;
+}
+
+.cv {
+    padding: 2em 0;
+    margin: 2em 4em;
+    border-radius: 2px;
+    border: 1px solid black;
+    box-shadow: 5px 0 6px 0 hsl(0 0% 0% / 0.2);
+}
+
+.cv>header {
+    border-bottom: 3px solid green;
+    padding-bottom: 1em;
+    margin-bottom:1em;
+}
+
+.cv>header>div>div>h1 {
+    color: darkgreen;
+    text-transform: uppercase;
+}
+
+.cv>header>div>div>h2 {
+    color: grey;
+}
+
+.cv > section > div{
+    padding-left:3em;
+}
+
+.cv > section > div > div {
+    padding:20px;
+}
+
+.cv>section>h3 {
+    text-transform: uppercase;
+    color: darkcyan;
+}
+
+.cv > section >h4{
+    color:grey;
+}
+
+
+@media screen and (max-width:720px) {
+
+    .cv {
+        margin: 2em;
+        border-radius: 2px;
+        border: 1px solid black;
+        box-shadow: 5px 0 6px 0 hsl(0 0% 0% / 0.2);
+    }
+
+    .cv>main>h1 {
+        font-size: 70%;
+    }
+
+    .cv>main>h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        font-size: 80%;
+    }
 }
