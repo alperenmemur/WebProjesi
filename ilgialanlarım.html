@@ -35,21 +35,41 @@
                     <a class="nav-link">İletişim</a>
                 </div>
             </div>
-            
+
             <button class="btn btn-outline-dark" type="button">Login</button>
         </div>
     </nav>
+    <main class="container">
 
-    <div id="hava__durumu">
-        <div id="box">
-            <h3 id="name"></h3>
-            <h2 id="temp"></h2>
-            <img id="icon">
-            <p id="feelsLike"></p>
-            <p id="humidity"></p>
-            <p id="wind"></p>
+        <div class="row" id="hava__durumu">
+            <div id="box">
+                <h3 id="name"></h3>
+                <h2 id="temp"></h2>
+                <img id="icon">
+                <p id="feelsLike"></p>
+                <p id="humidity"></p>
+                <p id="wind"></p>
+            </div>
         </div>
-    </div>
+        <div class="row">
+            <!-- c3c5b80bc674b387a57b9126d83ed441 -->
+            <div class="col-xl col-xl-8" id="dashboard">
+                <div id="wg-api-football-standings" data-host="v3.football.api-sports.io" data-league="39" data-team=""
+                    data-season="2021" data-key=""
+                    data-theme="" data-show-errors="false" class="api_football_loader">
+                </div>
+                <script type="module" src="https://widgets.api-sports.io/football/1.1.8/widget.js">
+                </script>
+            </div>
+
+
+            <div class="col-xl col-xl-4" id="timeline">
+                <a class="twitter-timeline" href="https://twitter.com/ManCity?ref_src=twsrc%5Etfw" data-width="500"
+                    data-height="600">Tweets by ManCity</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+    </main>
 
     <script>
         // DOM 
@@ -75,11 +95,11 @@
 
 
         function showCase(data) {
-            
+
             name.textContent = data.name + " ," + data.sys.country;
             temp.textContent = Math.round(data.main.temp) + ' ℃';
             const iconUrl = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png';
-            icon.setAttribute('src', iconUrl); 
+            icon.setAttribute('src', iconUrl);
             feelsLike.textContent = "Hissedilen sıcaklık: " + Math.round(data.main.feels_like) + ' ℃';
             humidity.textContent = "Nem seviyesi: " + data.main.humidity + " %";
             wind.textContent = "Rüzgar hızı: " + data.wind.speed + " km/h";
