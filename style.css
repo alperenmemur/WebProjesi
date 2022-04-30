@@ -87,6 +87,39 @@ p {
     margin:2em;
 }
 */
-#timeline{
+#timeline {
     text-align: center;
-} 
+}
+
+#miras{
+    background: linear-gradient(to right, #283c86, #45a247); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 1em 0;
+}
+
+.mirasimiz {
+    padding: 2em 0;
+    background-color: white;
+}
+
+.mirasimiz>figure {
+    width: 50% !important;
+    height: auto !important;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+
+@media screen and (max-width: 960px) {
+    .mirasimiz>figure {
+        width: 100% !important;
+        padding-bottom: 1em;
+
+    }
+}
+
+.mirasimiz>figure>img {
+    object-position: center center;
+    object-fit: contain;
+    margin: auto;
+}
