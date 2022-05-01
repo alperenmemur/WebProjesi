@@ -20,28 +20,29 @@
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">        
-    <div class="container-fluid">
-      <a class="navbar-brand" href="./index.html">Hakkında</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" aria-current="page" href="./ilgialanlarım.html">İlgi Alanlarım</a>
-            <a class="nav-link" href="./sehrim.html">Şehrim</a>
-            <a class="nav-link" href="./mirasımız.html">Mirasımız</a>
-            <a class="nav-link" href="./cv.html">CV</a>
-            <a class="nav-link" href="./Controllogin.php">İletişim</a>
-        </div>
-      </div>
-      <a href="./login.php"><button class="btn btn-outline-dark" type="button">Login</button></a>
-    </div>
-  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Hakkında</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="./ilgialanlarım.html">İlgi Alanlarım</a>
+                    <a class="nav-link" href="./sehrim.html">Şehrim</a>
+                    <a class="nav-link" href="./mirasımız.html">Mirasımız</a>
+                    <a class="nav-link" href="./cv.html">CV</a>
+                    <a class="nav-link" href="./iletisim.php">İletişim</a>
+                </div>
+            </div>
 
+            <a href="./login.php"><button class="btn btn-outline-dark" type="submit">Login</button></a>
+        </div>
+    </nav>
+  <div class="container" style="height:85vh;">
   <header>
-		<div>
+		<div> 
 			<h1>LOGIN</h1>
 	  </div>
 	</header>
@@ -62,8 +63,8 @@
       </form>          
     </div>
   </main>
-
-   <!-- Footer -->
+  </div>
+    <!-- Footer -->
   <footer class="bg-light text-center ">
     <p>Copyright© by Doğan Alperen Memur 2022</p>
   </footer>
