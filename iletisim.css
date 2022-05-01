@@ -1,0 +1,40 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+main{
+    margin:2em 0;
+    padding:1em 0;
+}
+
+
+#baslik {
+    text-align: center;
+}
+
+#add, #soyadd, #listee, #siniff, #cinsiyett, #dillerr, #dosyaa, #epostaa, #sifree, #mesajj, #butonn {
+    text-align: center;
+    padding:0.25em 0;
+
+}
