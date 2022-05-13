@@ -50,7 +50,7 @@
   <main>
     <div>    
       <!-- FORMU BU SEFER önkontrolden geçirmektense direkt olarak phpye gönderiyorum -->
-      <form action="Controllogin.php" method="POST">
+      <form action="Controllogin.php" method="POST" >
         <div>
           <label>Kullanıcı Adı</label>  
           <input type="text" name = "kullaniciadi" placeholder = "b201210390@sakarya.edu.tr" required> 

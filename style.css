@@ -72,6 +72,7 @@ p {
     
 }
 .hobi__image{
+    /* resmi ortalamak icin internetten aldim */
     display:flex;
     justify-content:center;
 
@@ -191,7 +192,7 @@ figcaption{
 
     }
 }
-/*FOTOLARI complete yerlestırıp ortaladım*/
+/*FOTOLARI komple yerlestırıp ortaladım*/
 .mirasimiz>figure>img {
     object-position: center center;
     object-fit: contain;
@@ -247,7 +248,7 @@ figcaption{
     color:grey;
 }
 
-
+/* Media query */
 @media screen and (max-width:720px) {
 
     .cv {
