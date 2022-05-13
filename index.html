@@ -6,19 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hakkında</title>
-
+    <!-- Bootstrap bağlantısı -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous" defer></script>
-
+    <!-- CSS dosya bağlantısı -->
     <link rel="stylesheet" href="./style.css">
 </head>
 
+<!-- Sayfanin görünen kısmı head kısmıdır. Style tag ile inline CSS özelliğini kullandım -->
 <body style="background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);  color:black;">
 
-    <!-- Navbar -->
+    <!-- Navigasyon barı Bootstrap kütüphanesinden kullandım -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">Hakkında</a>
@@ -40,9 +41,14 @@
         </div>
     </nav>
 
+    <!-- Main Tagini her sayfanın içeriğini oluşturerken kullandım. -->
+    <!-- Düzenli durması için bootstrap grid systemini kullandım -->
+    <!-- Containeri en üst bölümü ayırdım. Diğer sistemleri satır(row) ve sütun(column) olarak belirttim -->
+    <!-- Responsive design elde etmek için bazı columnları small(sm) ve medium(md) large(lg) olarak özelleştirdim. -->
     <main class="container" id="index">
         <div class="row anasayfa">
             <div class="col-md-4 col-sm-6">
+                <!-- Bazı imglarda bootstrap classları kullandım  -->
                 <img class="img-thumbnail rounded avatar" src="./Medya/Avatar1.jpg" alt="Avatar">
             </div>
             <div class="col-md-8 col-sm-6 anasayfa__giris">

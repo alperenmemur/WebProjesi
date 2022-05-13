@@ -10,8 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous" defer></script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
+        defer></script>
     <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -39,8 +39,11 @@
             <a href="./login.php"><button class="btn btn-outline-dark" type="submit">Login</button></a>
         </div>
     </nav>
+    <!-- Bu main classta öncelikle bootstrap düzenini kullanmak için container class ı atadım -->
+    <!-- Ardından row(satır) ve col(sütun) olarak kutu modelini yerleştirdim -->
+    <!-- Eğer en üst bölüt ü yani main i container sınıfı olarak vermeseydim, row ve column u kullanamzdım -->
     <main class="container">
-
+        <!-- Hava durumu api ı için Kalıpı burada oluşturdum. API bağlantılarını aşağıda yaptım. -->
         <div class="row" id="hava__durumu">
             <div id="box">
                 <h3 id="name"></h3>
@@ -53,23 +56,31 @@
         </div>
         <div class="row">
             <!-- c3c5b80bc674b387a57b9126d83ed441 -->
+
+            <!-- Footbal liglerini görüntülemek için APİ kullandım -->
+            <!-- APİ sağlayıcısı bana template olarak düzen sunuyordu bende onu kullandım. -->
             <div class="col-xl col-xl-8" id="dashboard">
+                <!-- DATA KEY kismi benim API sağlayan siteye kayıt olduktan sonra aldığım keydir. günlük 100 gösterim ile sınırlıdır. -->
                 <div id="wg-api-football-standings" data-host="v3.football.api-sports.io" data-league="39" data-team=""
-                    data-season="2021" data-key="021f4c507e1bdadb606da988af2f18ae" data-theme="" data-show-errors="false" class="api_football_loader">
+                    data-season="2021" data-key="021f4c507e1bdadb606da988af2f18ae" data-theme=""
+                    data-show-errors="false" class="api_football_loader">
                 </div>
+                <!-- APİ bağlantısını bu scriptten yaptım -->
                 <script type="module" src="https://widgets.api-sports.io/football/1.1.8/widget.js">
                 </script>
             </div>
 
-
+            <!-- Twitterdan sevdiğim takımın tweetline ını aldım -->
+            <!-- Onlarda widget şekilde bana api hizmeti sundu -->
             <div class="col-xl col-xl-4" id="timeline">
+                <!-- href Manchester City takımının source kodu -->
                 <a class="twitter-timeline" href="https://twitter.com/ManCity?ref_src=twsrc%5Etfw" data-width="500"
                     data-height="600">Tweets by ManCity</a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
     </main>
-    
+
     <!-- Footer -->
     <footer class="bg-light text-center ">
         <p>Copyright© by Doğan Alperen Memur 2022</p>
@@ -78,6 +89,8 @@
 
     <script>
         // DOM 
+        // Burada Yukarıda Yazdığım havadurumu Şablonun elemanlarına erişim sağlıyorum.
+        // hepsine Id ataması yaptığımdan getElementById ile erişimimi variable ile kısaltma yapıyorum(Pratik olsun diye)
         const content = document.getElementById("hava__durumu");
         const box = document.getElementById("box");
         const name = document.getElementById("name");
@@ -87,28 +100,53 @@
         const humidity = document.getElementById("humidity");
         const wind = document.getElementById("wind");
 
-        /*Default Location*/
+        /*Default Location
+        Burada yaptığım asyn fonksiyonu default olarak İstanbul verisi ile besliyorum.
+        */
         weather('Istanbul');
 
-        /* OpenWeatherMap Api*/
+        /* OpenWeatherMap Api
+        kullandım. Bu siteye kayıt olduktan sonra bana verdikleri 
+        API access keyi "appid= "olan yere yazdım
+        */
+
+        // Async fonksiyon diğer fonksiyonlardan farklı olarak Web Browserların Veri çekmesini beklerken fonksiyonu
+        // arkaplanda veri gelene kadar bekletebilmeme yardımcı oluyor.
+
         async function weather(getWeather) {
             // fetch 
+            //Veriyi çekiyorum
             const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + getWeather + '&units=metric&appid=10354683e2e4f6ac503236b20b4719e9');
+            // Javascript ile rahat işlem yapabilmek için Veriyi JSON formatına dönüştüroyum.
             const data = await response.json();
+
+            //Veri geldikten sonra ShowCase diye oluşturduğum dosyaya veri aktarıp orada manipüle ediyorum.
             showCase(data);
         }
 
-
+        //Datayı burada manipule edip yaptığım şablonu burada dolduruyorum.
         function showCase(data) {
 
+            //text context ile html taglerinin içini burdan dolduruyorum.
+
+            // data.name ve data.sys.country benim api dan çektiğin json dosyasında istediğim veriler.
             name.textContent = data.name + " ," + data.sys.country;
+            //hava durumu için istediğim veriyi data.main.temp ile çekiyorum sonra .00 (nokta) dan sonraki kısmı yuvarlıyorum.
             temp.textContent = Math.round(data.main.temp) + ' ℃';
+
+            //Api ın sunduğu icon verisini variable a atıyorum.
             const iconUrl = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png';
+            // Üstteki variable ı img taginin source dosyasını aktarıyorum => <img src="...">
             icon.setAttribute('src', iconUrl);
+
+            //hissedilen sicakligi data.main.feels_like api indan cekiyorum.
             feelsLike.textContent = "Hissedilen sıcaklık: " + Math.round(data.main.feels_like) + ' ℃';
+
+            //nemi data.main.humidity ve data.wind.speed ise rüzgar olarak apidan çekiyorum.
             humidity.textContent = "Nem seviyesi: " + data.main.humidity + " %";
             wind.textContent = "Rüzgar hızı: " + data.wind.speed + " km/h";
 
+            
             name.setAttribute("style", "font-family: 'Libre Baskerville', serif;");
             temp.setAttribute("style", "font-family: 'Libre Baskerville', serif;");
         }

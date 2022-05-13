@@ -14,7 +14,7 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous" defer>
   </script>  
-  <!-- CSS vs Javascript dosyalarini bagladik -->
+  <!-- CSS  -->
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -48,11 +48,13 @@
 	  </div>
 	</header>
 	
+  <!-- BURADA GÖNDERİLEN VERİYİ PHP DE KONTROL EDİYOR ARDINDAN -->
+  <!-- KONTROL EDILEN VERİYE GÖRE SAYFA OLUŞTURUYORUM  -->
    <main>
        <div>
         <?php 
 			    include("kullanicilar.php");
-
+          // Veri doğruysa bura
 				  if (($_POST["kullaniciadi"] == $user) and ($_POST["password"] == $pass)) {
 			      $_SESSION["login"] = "true";
 			      $_SESSION["user"] = $user;
@@ -60,6 +62,7 @@
 			
 			      echo("HOŞGELDİNİZ b201210390");
 				  }
+          //Yanlışsa  burası
 				  else {
 			      echo "Kullancı Adı veya Şifre Yanlış.<br>";
 			      echo "TEKRAR DENEYİN!";

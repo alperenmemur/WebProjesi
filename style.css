@@ -1,6 +1,12 @@
+
+/*MONTSERRAT ve CINZEL yazi tipinia GOOGLE font api dan cekiyorum burada  */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat&display=swap');
 
 
+
+/* ------------------------------------- */
+/*Bu aralık benim projeye başlarken kullandığım default aralık*/
+/*Ben css in content box özelliğindne çok alternatif olarak border-box Özelliğini seviyorum */
 html {
     box-sizing: border-box;
 }
@@ -25,7 +31,11 @@ p {
     margin: 0;
     padding: 0;
 }
+/* ------------------------------------- */
 
+/*              index.html              */
+/*11111111111111111111111111111111111111111111111111111111111111111111111111111111111111*/
+/*Index.html sayfasindaki main containera id atayarak buradan yazi tipi degistiridm*/
 #index{
     font-family: 'Montserrat', sans-serif;
 }
@@ -69,7 +79,13 @@ p {
 .hobi__image > img{
     border-radius:20px;
 }
+/*11111111111111111111111111111111111111111111111111111111111111111111111111111111111111*/
 
+
+
+
+/*              sehrim.html             */
+/*222222222222222222222222222222222222222222222222222222222222222222222222222222222222222*/
 .slide {
     width: 50%;
     height: auto;
@@ -104,6 +120,13 @@ p {
     font-size:2em;
 }
 
+/*222222222222222222222222222222222222222222222222222222222222222222222222222222222222222*/
+
+
+
+
+/*              ilgialanlarım.html              */
+/*3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333*/
 #hava__durumu {
     text-align: center;
     margin: 2em 0;
@@ -120,15 +143,16 @@ p {
     text-shadow: 1px 1px 1px black;
 }
 
-/* #dashboard {
-    width: 60%;
-    margin:2em;
-}
-*/
 #timeline {
     text-align: center;
 }
+/*3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333*/
 
+
+
+
+/*              mirasımız.html              */
+/*44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444*/
 #miras {
     padding: 1em 0;
 }
@@ -153,13 +177,13 @@ figcaption{
     font-size:1.5em;
 }
 
-/* Animasyon */
+/* CSS Animasyonunu burada kullandım. */
 .mirasimiz>figure>img:hover {
     transform: scale(1.05);
     transition: transform 100ms ease-in;
 
 }
-
+/* Responsive design için Ekran boyutu 960 dan küçüklere özel CSS dahi tasarladım */
 @media screen and (max-width: 960px) {
     .mirasimiz>figure {
         width: 100% !important;
@@ -167,13 +191,19 @@ figcaption{
 
     }
 }
-
+/*FOTOLARI complete yerlestırıp ortaladım*/
 .mirasimiz>figure>img {
     object-position: center center;
     object-fit: contain;
     margin: auto;
 }
+/*44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444*/
 
+
+
+
+/*              cv.html             */
+/*555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555*/
 .cv {
     padding: 2em 0;
     margin: 2em 4em;
@@ -240,7 +270,11 @@ figcaption{
         font-size: 80%;
     }
 }
+/*555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555*/
 
+
+
+/*Footer özel dizaynı burada ayarladım*/
 footer{
     padding:2vh 0;
     font-weight: 600;

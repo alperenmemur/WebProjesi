@@ -18,6 +18,11 @@
 </head>
 
 <body style="background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);">
+
+    <!-- KULLANILAN SEMANTİC TAGLER  -->
+    <!-- NAV, MAİN, SECTİON, FIGURE, FIGCAPTION ve FOOTER  -->
+
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -40,10 +45,14 @@
         </div>
     </nav>
 
+    <!-- Miras tag ini buradan açtım -->
     <div id="miras">
+        <!-- Container yapısını sonradan ekledim çünkü default BOOTSTRAP containeriyla biraz oynamak istedim -->
         <main class="container">
             <!-- Galata Kulesi Bölümü  -->
+            <!-- Semantic tag olarak section kullandım -->
             <section class="row mirasimiz">
+                <!-- İMG leri figure  semantic taginin içinde kullandım. ve altlarına yazı olarak figcaption ekledim -->
                 <figure>
                     <img class="d-block w-50" src="./Medya/Galata-Kulesi.jpg" alt="Galata Kulesi">
                     <figcaption>Galata Kulesi</figcaption>
@@ -68,7 +77,13 @@
                 </p>
 
             </section>
+
+
+
+            <!-- Düz çizgiyi HR ile çizdim -->
             <hr>
+
+
             <!-- Dolmabahçe Sarayı Bölümü -->
             <section class="row mirasimiz">
                 <figure>

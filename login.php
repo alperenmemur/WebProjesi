@@ -39,6 +39,8 @@
             <a href="./login.php"><button class="btn btn-outline-dark" type="submit">Login</button></a>
         </div>
     </nav>
+
+    <!-- CONTAİNER a style olarak 85 view height(vh) verdim. Daha düzgün gözüksün diye -->
   <div class="container" style="height:85vh;">
   <header>
 		<div> 
@@ -47,6 +49,7 @@
 	</header>
   <main>
     <div>    
+      <!-- FORMU BU SEFER önkontrolden geçirmektense direkt olarak phpye gönderiyorum -->
       <form action="Controllogin.php" method="POST">
         <div>
           <label>Kullanıcı Adı</label>  
@@ -57,6 +60,7 @@
           <input type="password" name = "password" placeholder = "b201210390" required> 
         </div>
         <div>
+          <!-- Formu burdan submit ediyorum diğer sayfada buton ile etmiştim. Bu sayfada bu yöntemi deniyorum -->
           <input type="submit"> 
         </div>       
       </form>          
