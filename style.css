@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat&display=swap');
+
+
 html {
     box-sizing: border-box;
 }
@@ -23,13 +26,52 @@ p {
     padding: 0;
 }
 
-.avatar {
-    object-fit: contain;
+#index{
+    font-family: 'Montserrat', sans-serif;
 }
 
+.avatar {
+    object-fit: cover;
+}
+.anasayfa{
+    padding-top:5vh;
+    margin-bottom:7vh;
+}
+
+.anasayfa__giris{
+    padding:20px 40px;
+    line-height: 1.7;
+}
+.anasayfa__giris>h1{
+    font-family: 'Cinzel' ,serif;
+    margin-bottom:20px;
+    letter-spacing: 2px;
+}
+.anasayfa__giris >h3{
+    margin-bottom:10px;
+}
+
+.hobi{
+    margin-bottom:5vh;
+}
+.hobi__hakkinda{
+    line-height: 1.7;
+}
+.hobi__hakkinda>img{
+    border-radius:20px;
+    
+}
+.hobi__image{
+    display:flex;
+    justify-content:center;
+
+}
+.hobi__image > img{
+    border-radius:20px;
+}
 
 .slide {
-    width: 40%;
+    width: 50%;
     height: auto;
     margin: auto;
     margin-top: 2em;
@@ -42,36 +84,39 @@ p {
 }
 
 .sehrim {
-    background: linear-gradient(to right, #ffffff, #abbaab);
+    font-family:'Montserrat',sans-serif;    
 }
 
 .sehrim__konu {
 
-    margin: 20px 80px;
+    margin: 1em 4em;
     text-align: center;
-    padding: 3em;
-    word-spacing: 1.2;
+    padding: 2.5em;
+    word-spacing: 1.3;
+
 }
 
 .sehrim__konu>h3 {
     margin-bottom: 1em;
     font-weight: 700;
+    font-family: 'Cinzel' ,serif;
+    letter-spacing: 5px;
+    font-size:2em;
 }
 
 #hava__durumu {
     text-align: center;
     margin: 2em 0;
-
 }
 
 #box {
     border: 2px solid rgb(73, 73, 73);
     border-radius: 8px;
-    width: 40%;
+    width: 50%;
     margin: auto;
     padding: 1em 0;
-    background: linear-gradient(to right, #191654, #43C6AC);
-    color: #f9f9f9;
+    background: linear-gradient(to right, #ffd89b, #19547b);    
+    color: #f8f8f8;
     text-shadow: 1px 1px 1px black;
 }
 
@@ -85,14 +130,13 @@ p {
 }
 
 #miras {
-    background: linear-gradient(to right, #283c86, #45a247);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 1em 0;
 }
 
 .mirasimiz {
     padding: 2em 0;
-    background-color: white;
+    font-family:'Montserrat',sans-serif;
+    line-height:1.7;
 }
 
 .mirasimiz>figure {
@@ -103,10 +147,15 @@ p {
     padding-bottom: 1em;
 
 }
+figcaption{
+    font-weight: 700;
+    margin-top:1em;
+    font-size:1.5em;
+}
 
 /* Animasyon */
 .mirasimiz>figure>img:hover {
-    transform: scale(0.95);
+    transform: scale(1.05);
     transition: transform 100ms ease-in;
 
 }
@@ -131,12 +180,15 @@ p {
     border-radius: 2px;
     border: 1px solid black;
     box-shadow: 5px 0 6px 0 hsl(0 0% 0% / 0.2);
+    background-color:#f9f9f9;
+    font-family:'Montserrat',sans-serif !important;
 }
 
 .cv>header {
     border-bottom: 3px solid green;
     padding-bottom: 1em;
     margin-bottom:1em;
+    font-family:'Cinzel',serif;
 }
 
 .cv>header>div>div>h1 {
@@ -187,4 +239,9 @@ p {
     p {
         font-size: 80%;
     }
+}
+
+footer{
+    padding:2vh 0;
+    font-weight: 600;
 }
