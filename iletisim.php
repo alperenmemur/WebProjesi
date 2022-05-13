@@ -14,7 +14,7 @@
     </script>
 
     <link rel="stylesheet" href="./iletisim.css">
-    <script src="index.js"></script>
+    <script src="iletisimKontrol.js"></script>
 </head>
 <body>
 

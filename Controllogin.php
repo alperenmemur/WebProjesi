@@ -16,7 +16,6 @@
   </script>  
   <!-- CSS vs Javascript dosyalarini bagladik -->
   <link rel="stylesheet" href="./style.css">
-  <script src="index.js"></script>
 
 </head>
 <body>
@@ -70,7 +69,7 @@
    </main>
 
   <!-- Footer -->
-  <footer class="bg-light text-center ">
+  <footer class="bg-light text-center "  style="margin-top:72vh;">
    <p>Copyright© by Doğan Alperen Memur 2022</p>
   </footer>
 </body>

@@ -15,7 +15,6 @@
   </script>  
   <!-- CSS vs Javascript dosyalarini bagladik -->
   <link rel="stylesheet" href="./style.css">
-  <script src="index.js"></script>
 
 </head>
 <body>
